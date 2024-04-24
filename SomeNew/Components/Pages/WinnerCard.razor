@@ -1,0 +1,24 @@
+﻿@inject IJSRuntime JSRuntime
+@if (Regame == "Winner")
+{
+    <div class="Card">
+    <img src=@Card/>
+</div>
+<button @onclick="More" class="More">сыграть еще</button>
+}
+
+@if (Regame == "Watch")
+{
+    <SomeNew.Components.Layout.Game Code=@Code UserId=@UserId></SomeNew.Components.Layout.Game>
+}
+@if (Regame == "Wait") {
+    <h1>Ожидание второго игрока</h1>
+    <div class="spinner">
+        <div class="blob top"></div>
+        <div class="blob bottom"></div>
+        <div class="blob left"></div>
+        <div class="blob move-blob"></div>
+        <div>@Code</div>
+    </div>
+}
+

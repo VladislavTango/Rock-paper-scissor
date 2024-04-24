@@ -1,0 +1,39 @@
+﻿.MainBlock {
+    height:60vh;
+    width:100%;
+}
+.Card {
+    height: 44vh;
+    width: 15%;
+    background-color: #202020;
+    float: left;
+    border-radius: 5vh;
+    margin-left: 23vw;
+    margin-top: 5vh;
+}
+
+img {
+    width: 75%;
+    height: 25vh;
+    margin-left: 15%;
+    margin-top: 30%;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #050505;
+    font-size: 1.5vw;
+    color: #999999;
+    margin-left: 42.5vw;
+    margin-top: -22%;
+    height: 7vw;
+    width: 15vw;
+}
+
+    button:hover {
+        -webkit-transform: scale(1.07);
+        -ms-transform: scale(1.07);
+        transform: scale(1.07);
+        transition: 0.3s;
+    }

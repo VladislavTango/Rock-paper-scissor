@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+
+package RestartGame;
+
+
+service RestartGame {
+  rpc PlayMore(PlayMoreRequest) returns (stream PlayMoreResponse);
+}
+
+message PlayMoreRequest {
+	string userId = 1;
+	string roomId = 2;
+}
+
+message PlayMoreResponse {
+  string Winner = 1;
+}
+
+
+

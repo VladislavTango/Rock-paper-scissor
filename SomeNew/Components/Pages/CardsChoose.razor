@@ -1,0 +1,14 @@
+﻿@using SomeNew.Infrastructure
+
+
+
+<div class="Container">
+    @foreach (var item in Enum.GetNames<CardsForChoose>()) {
+        <div @onclick="() => Choose(item)"  class="Card"  >
+        <img src=@GetPage(item) />
+        </div>
+    }
+    <div>@choosenCard</div>
+</div>
+
+

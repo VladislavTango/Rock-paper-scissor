@@ -1,0 +1,53 @@
+﻿.RoomElement {
+    margin-bottom:0.1vh;
+    width: 60vw;
+    height: 12vh;
+    background-color: #151515;
+    color: white;
+    font-size: 2vw;
+    display:grid;
+    align-items:end;
+}
+
+.RoomConnect {
+    width: 15%;
+    height: 100%;
+    background-color: #252525;
+    color: white;
+    font-size: 1vw;
+    float:inline-end
+}
+
+
+
+.MainBlock {
+    width: 60vw;
+    height: 100vh;
+    background-color: #202020;
+    margin-left: 20vw;
+}
+
+.Search {
+    width: 90%;
+    height: 8vh;
+    font-size: 8vh;
+}
+.Refresh {
+    width: 10%;
+    height: 8vh;
+    font-size: 8vh;
+    background-color: #282828;
+    float:right;
+}
+img {
+    height: 6vh;
+    margin-bottom:60%;
+}
+
+.Create {
+    background-color: #000000;
+    height: 8vh;
+    width: 100%;
+    font-size: 2vw;
+    color:white;
+}

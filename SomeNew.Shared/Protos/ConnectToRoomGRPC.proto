@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+
+
+package GameConnect;
+
+
+service GameConnect {
+  rpc CheckRoom(RoomRequest) returns (stream RoomResponse);
+}
+
+message RoomRequest {
+  string roomId = 1;
+}
+
+message RoomResponse {
+  int32 userCount = 1;
+}
+
+
+

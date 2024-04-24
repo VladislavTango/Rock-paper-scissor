@@ -1,0 +1,47 @@
+﻿@inherits LayoutComponentBase
+@if (Code == null)
+{
+<div class="MainBlock">
+        <input class="Search" @bind="TextToSearch" @bind:after="PerformSearch" type="text" maxlength="5" />
+        <button onclick="@GetRooms" class="Refresh">
+        <img src="Images/Refresh.png"  />
+    </button>
+    <div style="overflow:auto;height:83%;">
+        @if(Rooms!=null)
+        {
+            if(TextToSearch==""){
+                foreach(var item in Rooms)
+                {
+                    <div class="RoomElement">
+                        код комнаты: @item
+                            <button class="RoomConnect" @onclick="(()=>JoinGame(item))">Подключиться</button>
+                    </div>
+                        <br>
+                    }
+                }
+                else
+                {
+                    foreach (var item in SearchRooms)
+                    {
+                        <div class="RoomElement">
+                            код комнаты: @item
+                            <button class="RoomConnect" @onclick="(()=>JoinGame(item))">Подключиться</button>
+                        </div>
+                        <br>
+                    }
+                }
+            }
+            }
+    </div>
+
+        <button @onclick=CreateRoom class="Create">создать комнату</button> 
+</div> 
+}
+@if (Code != null)
+{
+    <Game Code="@Code" UserId="@UserId"/>
+}
+
+
+
+

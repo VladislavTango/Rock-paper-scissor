@@ -1,0 +1,34 @@
+﻿@inject IJSRuntime JSRuntime
+@if (play=="Wait")
+{
+    if (Card == "undef") Wait();
+    <h1>Ожидание второго игрока</h1>
+    <div class="spinner">
+        <div class="blob top"></div>
+        <div class="blob bottom"></div>
+        <div class="blob left"></div>
+        <div class="blob move-blob"></div>
+        <div>@Code</div>
+    </div>
+}
+@if(play=="Play")
+{
+    <div сlass="container">
+    <div class="section1">
+        <label>комната:@Code</label>
+        <Cards ChoosenCard="@Card" />
+        <button @onclick="()=>Choose(Card)" >Выбрать</button>
+
+    </div>
+    <div class="section2">
+        <CardsChoose @bind-ChoosenCard="Card" />
+    </div>
+</div>
+}
+@if (play == "ShowResult")
+{
+    <WinnerCard Card="@WinnerCard" Code="@Code" UserId="@UserId" ></WinnerCard>
+}
+@code {
+    string? Card = "undef";
+}

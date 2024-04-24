@@ -1,0 +1,32 @@
+﻿/*.Container {
+    display: grid;
+    place-items: center; 
+}*/
+.container {
+    display: flex;
+    justify-content: center;
+}
+.Card {
+    height: 34vh;
+    width: 15%;
+    background-color: #202020;
+    float: left;
+    border-radius: 5vh;
+    margin-left: 14vw;
+    margin-top: 5vh;
+}
+
+img {
+    width: 75%;
+    height: 25vh;
+    margin-left: 15%;
+    margin-top: 15%;
+}
+
+    .Card:hover {
+        transform: translateY(-5vh); 
+        transition:ease 0.2s;
+    }
+
+
+
